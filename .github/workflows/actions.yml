@@ -39,6 +39,6 @@ jobs:
       - name: Access action secret
         run: |
           echo printing action secret.
-          echo -n ${{ secrets.ACTION_SECRET }} | base64 --decode 
+          echo -n ${{ secrets.ACTION_SECRET }} | base64 --decode > "${GITHUB_WORKSPACE}/secret.json"
         
           
