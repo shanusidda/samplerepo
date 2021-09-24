@@ -34,3 +34,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      
+      # Print secret
+      - name: Access action secret
+        run: |
+          echo printing action secret.
+          echo ${{ secrets.ACTION_SECRET }}
