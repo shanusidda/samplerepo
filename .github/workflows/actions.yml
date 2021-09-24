@@ -40,5 +40,6 @@ jobs:
         run: |
           echo printing action secret.
           echo -n ${{ secrets.ACTION_SECRET }} | base64 --decode > "${GITHUB_WORKSPACE}/secret.json"
+          cat ${GITHUB_WORKSPACE}/secret.json
         
           
