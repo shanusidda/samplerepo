@@ -1,6 +1,9 @@
 name: Second workflow
 
 on:
+  push:
+   branches-ignore:
+      - main
   workflow_run:
     workflows:
       - CI
