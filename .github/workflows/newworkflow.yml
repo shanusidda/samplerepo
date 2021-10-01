@@ -1,0 +1,23 @@
+name: Second workflow
+
+on:
+  workflow_run:
+    workflows:
+      - 
+    types:
+      - completed
+    branches-ignore:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.workflow_run.head_branch }}
+      - name: Print second workflow
+        run: |
+          echo ${{ github.event.number }}
