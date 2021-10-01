@@ -1,0 +1,22 @@
+plugins {
+	id "java"
+	
+}
+
+group = "shanusidda"
+version = "0.0.1-SNAPSHOT"
+sourceCompatibility = "11"
+
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	
+   
+	implementation "org.liquibase:liquibase-core:4.4.3"
+  implementation "com.google.cloud:google-cloud-nio:0.123.12
+
+	}
