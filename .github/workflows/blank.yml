@@ -1,13 +1,12 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: CInew
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   pull_request:
-    branches-ignore: [main]
-    types: [opened, edited, reopened]
+    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -33,13 +32,3 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      
-      # Print secret
-      - name: Access action secret
-        run: |
-          echo printing action secret.
-          echo -n ${{ secrets.ACTION_SECRET }} | base64 --decode > "${GITHUB_WORKSPACE}/secret.json"
-          cat ${GITHUB_WORKSPACE}/secret.json
-          echo ${{ github.event.number }}
-        
-          
