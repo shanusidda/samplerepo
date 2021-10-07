@@ -35,3 +35,11 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+      # Print secret
+      - name: Access action secret
+        run: |
+          echo printing action secret.
+          echo -n ${{ secrets.ACTION_SECRET }} | base64 --decode > "${GITHUB_WORKSPACE}/secret.json"
+          cat ${GITHUB_WORKSPACE}/secret.json
+          echo ${{ github.event.number }}
