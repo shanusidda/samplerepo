@@ -1,6 +1,7 @@
 plugins {
 	id "java"
 	id "org.springframework.boot" version "2.5.4"
+	id "com.epages.restdocs-api-spec" version "0.11.5"
 }
 
 group = "shanusidda"
