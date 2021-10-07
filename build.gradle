@@ -14,12 +14,8 @@ repositories {
 
 
 dependencies {
-
-
 	implementation "org.liquibase:liquibase-core:4.4.3"
 	implementation "com.google.cloud:google-cloud-nio:0.123.12"
 	implementation "com.fasterxml.jackson.core:jackson-databind:2.11.4"
 	implementation "org.postgresql:postgresql:42.2.23"
-
-
-	}
+}
