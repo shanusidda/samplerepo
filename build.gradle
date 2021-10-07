@@ -14,7 +14,6 @@ sourceCompatibility = "11"
 
 repositories {
 	mavenCentral()
-
 }
 
 dependencies {
@@ -23,4 +22,6 @@ dependencies {
 	implementation "com.fasterxml.jackson.core:jackson-databind:2.11.4"
 	implementation "org.postgresql:postgresql:42.2.23"
 	testImplementation 'net.javacrumbs.json-unit:json-unit:2.27.0'
+	testImplementation 'org.xmlunit:xmlunit-matchers:2.7.0'
+
 }
