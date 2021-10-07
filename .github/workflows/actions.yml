@@ -6,8 +6,6 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   pull_request:
-    branches-ignore:  
-       - main 
     types: [opened, edited, reopened]
 
   # Allows you to run this workflow manually from the Actions tab
