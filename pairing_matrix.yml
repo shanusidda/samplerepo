@@ -4,5 +4,5 @@ github:
   url: https://api.github.com/
   access_token: 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
   repositories:
-    - samplerepo
-    - testrepo
+    - shanusidda/samplerepo
+    - shanusidda/testrepo
