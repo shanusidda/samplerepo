@@ -1,0 +1,8 @@
+authors_regex: ^.*\[([\w]*)(?:\/)?([\w]*)\].*$
+
+github:
+  url: https://api.github.com/
+  access_token: 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
+  repositories:
+    - samplerepo
+    - testrepo
