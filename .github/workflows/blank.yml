@@ -42,7 +42,9 @@ jobs:
           
       # Wait for other running pipelines
       - name: Wait for other pipelines
-        run: waitforpipeline.sh
+        env:
+           GITHUB_TOKEN: ${{ secrets. GITHUB_TOKEN }}
+        run: ./.github/workflows/waitforpipeline.sh
         shell: bash
           
           
