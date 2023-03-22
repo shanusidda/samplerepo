@@ -45,10 +45,11 @@ jobs:
           
       # Wait for other running pipelines
       - name: Wait for other pipelines
-        env:
-           GITHUB_TOKEN: ${{ secrets. GITHUB_TOKEN }}
-        run: ./waitforpipeline.sh
-        shell: bash
+        uses: lewagon/wait-on-check-action@v1.3.1
+        with:
+          ref: ${{ github.ref }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 10
           
           
       # Print secret
