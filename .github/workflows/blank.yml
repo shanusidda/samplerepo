@@ -48,7 +48,10 @@ jobs:
       - name: Wait for other pipelines
         uses: lewagon/wait-on-check-action@v1.3.1
         with:
-          ref: ${{ github.ref }}
+          ref: |
+            ${{ github.ref }}
+            echo ${{ github.ref}}
+          
           running-workflow-name: 'Build workflow'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           wait-interval: 10
