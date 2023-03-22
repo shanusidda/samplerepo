@@ -40,6 +40,12 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
+      # Wait for other running pipelines
+      - name: Wait for other pipelines
+        run: waitforpipeline.sh
+        shell: bash
+          
+          
       # Print secret
       - name: Access action secret
         run: |
