@@ -48,19 +48,7 @@ jobs:
       - name: Wait for other pipelines
         uses: lewagon/wait-on-check-action@v1.3.1
         with:
-          ref: |
-            ${{ github.ref }}
-            echo ${{ github.ref}}
-          
+          ref: ${{ github.ref}}
           running-workflow-name: 'Build workflow'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           wait-interval: 10
-          
-          
-      # Print secret
-      - name: Access action secret
-        run: |
-          echo printing action secret.
-          echo -n ${{ secrets.ACTION_SECRET }} | base64 --decode > "${GITHUB_WORKSPACE}/secret.json"
-          cat ${GITHUB_WORKSPACE}/secret.json
-          echo ${{ github.event.number }}
