@@ -39,6 +39,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+            
+      - name: Checkout repository
+        uses: actions/checkout@v2
           
       # Wait for other running pipelines
       - name: Wait for other pipelines
