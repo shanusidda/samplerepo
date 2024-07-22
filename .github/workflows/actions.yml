@@ -1,9 +1,5 @@
 name: Test pipeline failure 
 
-description: |
-  This GitHub Action sets up the Google Cloud SDK, prints authentication information,
-  and calls a shell script.
-
 on:
   push:
     branches:
