@@ -1,4 +1,4 @@
-ame: Use GCloud Action
+name: Test pipeline failure 
 
 description: |
   This GitHub Action sets up the Google Cloud SDK, prints authentication information,
@@ -17,10 +17,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up Cloud SDK
-      uses: google-github-actions/setup-gcloud@v2
-
-    - name: Use gcloud CLI
+    - name: Push API Documentation
       run: |
-        gcloud auth list
-      shell: bash
+          git add .
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git commit -am "Test commit" || echo "Nothing to commit"
+          git push || echo "Nothing to push"
